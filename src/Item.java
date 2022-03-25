@@ -1,3 +1,10 @@
+// Abstract class representing Items for implementing Heroes and Monsters.
 public abstract class Item {
 
+    protected String name;
+    protected int price;
+    protected int minLevel;
+
+    public abstract String toString();
+    
 }
