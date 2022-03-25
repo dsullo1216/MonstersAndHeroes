@@ -1,5 +1,6 @@
 public class Spell extends Weapon {
 
+    protected String type;
     protected int mana;
     protected String reducedStat;
 
