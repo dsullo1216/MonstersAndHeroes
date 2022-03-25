@@ -13,6 +13,25 @@ public class Armor extends Item {
         return name + " / " + Integer.toString(price) + " / " + Integer.toString(minLevel) + " / " + Integer.toString(defense);
     }
 
+    @Override
+    public boolean equals(Object other) {
+
+        if (other == this) {
+            return true;
+        }
+
+        if (!(other instanceof Armor)) {
+            return false;
+        }
+        
+        Armor otherA = (Armor) other;
+        return ((this.name == otherA.getName()) && 
+                (this.price == otherA.getPrice()) && 
+                (this.minLevel == otherA.getMinLevel()) && 
+                (this.defense == otherA.getDefense()));
+    
+    }
+
     public String inventoryHeader() {
         return "Armor Name / Price / Level Required / Defense";
     }

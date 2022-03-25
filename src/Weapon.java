@@ -13,6 +13,25 @@ public class Weapon extends Item {
         return name + " / " + Integer.toString(price) + " / " + Integer.toString(minLevel) + " / " + Integer.toString(damage);
     }
 
+    @Override
+    public boolean equals(Object other) {
+
+        if (other == this) {
+            return true;
+        }
+
+        if (!(other instanceof Weapon)) {
+            return false;
+        }
+        
+        Weapon otherW = (Weapon) other;
+        return ((this.name == otherW.getName()) && 
+                (this.price == otherW.getPrice()) && 
+                (this.minLevel == otherW.getMinLevel()) && 
+                (this.damage == otherW.getDamage()));
+    
+    }
+
     public String inventoryHeader() {
         return "Weapon Name / Price / Level Required / Damage";
     }

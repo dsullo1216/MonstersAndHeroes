@@ -15,6 +15,26 @@ public class Potion extends Item {
         return name + " / " + Integer.toString(price) + " / " + Integer.toString(minLevel) + " / " + Integer.toString(buffAmt) + " / " + buffedStat;
     }
 
+    @Override
+    public boolean equals(Object other) {
+
+        if (other == this) {
+            return true;
+        }
+
+        if (!(other instanceof Potion)) {
+            return false;
+        }
+        
+        Potion otherP = (Potion) other;
+        return ((this.name == otherP.getName()) && 
+                (this.price == otherP.getPrice()) && 
+                (this.minLevel == otherP.getMinLevel()) && 
+                (this.buffAmt == otherP.getBuffAmt()) && 
+                (this.buffedStat == otherP.getBuffedStat()));
+    
+    }
+
     public String inventoryHeader() {
         return "Potion Name / Price / Level Required / Buff Amount / Stat Buffed";
     }
