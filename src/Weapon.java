@@ -10,22 +10,15 @@ public class Weapon extends Item {
     }
 
     public String toString() {
-        return "Weapon Name / Price / Level Required / Damage" + '\n' + name + " / " + Integer.toString(price) + " / " + Integer.toString(minLevel) + " / " + Integer.toString(damage);
+        return name + " / " + Integer.toString(price) + " / " + Integer.toString(minLevel) + " / " + Integer.toString(damage);
     }
 
-    public String getName() {
-        return this.name;
-    }
-
-    public int getPrice() {
-        return this.price;
-    }
-
-    public int getMinLevel() {
-        return this.minLevel;
+    public String inventoryHeader() {
+        return "Weapon Name / Price / Level Required / Damage";
     }
 
     public int getDamage() {
-        return this.damage;
+        return damage;
     }
+    
 }

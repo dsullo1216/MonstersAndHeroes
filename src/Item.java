@@ -6,5 +6,19 @@ public abstract class Item {
     protected int minLevel;
 
     public abstract String toString();
+
+    public abstract String inventoryHeader();
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public int getMinLevel() {
+        return minLevel;
+    }
     
 }

@@ -10,22 +10,15 @@ public class Armor extends Item {
     }
 
     public String toString() {
-        return "Armor Name / Price / Level Required / Defense" + '\n' + name + " / " + Integer.toString(price) + " / " + Integer.toString(minLevel) + " / " + Integer.toString(defense);
+        return name + " / " + Integer.toString(price) + " / " + Integer.toString(minLevel) + " / " + Integer.toString(defense);
     }
 
-    public String getName() {
-        return this.name;
-    }
-
-    public int getPrice() {
-        return this.price;
-    }
-
-    public int getMinLevel() {
-        return this.minLevel;
+    public String inventoryHeader() {
+        return "Armor Name / Price / Level Required / Defense";
     }
 
     public int getDefense() {
-        return this.defense;
+        return defense;
     }
+
 }
