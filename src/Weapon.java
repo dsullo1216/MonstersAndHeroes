@@ -1,6 +1,6 @@
 public class Weapon extends Item {
     
-    private int damage;
+    protected int damage;
 
     public Weapon(String name, int price, int minLevel, int damage) {
         this.name = name;
@@ -20,5 +20,5 @@ public class Weapon extends Item {
     public int getDamage() {
         return damage;
     }
-    
+
 }

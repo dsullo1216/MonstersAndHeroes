@@ -11,7 +11,7 @@ public class Spell extends Weapon {
     }
 
     public String toString() {
-        return name + " / " + Integer.toString(price) + " / " + Integer.toString(minLevel) + " / " + Integer.toString(mana) + " / " + reducedStat;
+        return name + " / " + Integer.toString(price) + " / " + Integer.toString(minLevel) + " / " + Integer.toString(damage) + " / " +Integer.toString(mana) + " / " + reducedStat;
     }
 
     public String inventoryHeader() {
