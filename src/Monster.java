@@ -1,6 +1,5 @@
 public class Monster extends Entity {
     
-    protected String type;
     protected int damage;
     protected int defense;
     protected int dodgeChance;
@@ -22,6 +21,27 @@ public class Monster extends Entity {
                Integer.toString(damage) + " / " + 
                Integer.toString(defense) + " / " +
                Integer.toString(dodgeChance);
+    }
+
+    @Override
+    public boolean equals(Object other) {
+
+        if (other == this) {
+            return true;
+        }
+
+        if (!(other instanceof Monster)) {
+            return false;
+        }
+        
+        Monster otherM = (Monster) other;
+        return ((this.name == otherM.getName()) && 
+                (this.level == otherM.getLevel()) &&
+                (this.damage == otherM.getDamage()) &&
+                (this.defense == otherM.getDefense()) &&
+                (this.dodgeChance == otherM.getDodgeChance()) &&
+                (this.type == otherM.getType()));
+
     }
 
     public String description() {

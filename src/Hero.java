@@ -1,6 +1,5 @@
 public class Hero extends Entity {
 
-    protected String type;
     protected int exp;
     protected int mana;
     protected int strength;
@@ -37,6 +36,27 @@ public class Hero extends Entity {
                Integer.toString(agility) + " / " + 
                Integer.toString(dexterity) + " / " +
                Integer.toString(wallet);
+    }
+
+    @Override
+    public boolean equals(Object other) {
+
+        if (other == this) {
+            return true;
+        }
+
+        if (!(other instanceof Hero)) {
+            return false;
+        }
+        
+        Hero otherH = (Hero) other;
+        return ((this.name == otherH.getName()) && 
+                (this.mana == otherH.getMana()) && 
+                (this.strength == otherH.getStrength()) && 
+                (this.agility == otherH.getAgility()) &&
+                (this.dexterity == otherH.getDexterity()) && 
+                (this.type == otherH.getType()));
+
     }
 
     public String description() {
