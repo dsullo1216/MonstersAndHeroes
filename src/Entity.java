@@ -1,10 +1,13 @@
 public abstract class Entity {
     
+    protected String type;
     protected String name;
     protected int level;
     protected int hp;
 
     public abstract String toString();
+
+    public abstract String description();
 
     public String getName() {
         return name;
