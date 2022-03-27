@@ -43,8 +43,63 @@ public class Hero extends Entity {
         return "Type    /   Name    /   Level    /   HP    /   Mana    /   Defense    /   Strength    /   Agility    /   Dexterity    /   Wallet";
     }
 
-    public boolean attack(Entity other) {
-        return false;
+    public String getType() {
+        return type;
     }
-    
+
+    public int getMana() {
+        return mana;
+    }
+
+    public int updateMana(int newMana) {
+        this.mana = newMana;
+        return newMana;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public int updateStrength(int newStrength) {
+        this.strength = newStrength;
+        return newStrength;
+    }
+
+    public int getAgility() {
+        return agility;
+    }
+
+    public int updateAgility(int newAgility) {
+        this.agility = newAgility;
+        return newAgility;
+    }
+
+    public int getDexterity() {
+        return dexterity;
+    }
+
+    public int updateDexterity(int newDexterity) {
+        this.dexterity = newDexterity;
+        return newDexterity;
+    }
+
+    public int getWallet() {
+        return wallet;
+    }
+
+    public int updateWallet(int newWallet) {
+        this.wallet = newWallet;
+        return newWallet;
+    }
+
+    public void levelUp() {
+        this.level += 1;
+        this.exp = 0;
+        this.hp = level * 100;
+        this.mana *= 1.1;
+        this.strength *= 1.05;
+        this.agility *= 1.05;
+        this.dexterity *= 1.05;
+    }
+
 }
