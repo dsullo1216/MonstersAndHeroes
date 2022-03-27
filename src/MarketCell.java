@@ -4,6 +4,7 @@ public class MarketCell extends AccessibleCell {
 
     public MarketCell(int[] position) {
         super('M', position);
+        type = "Market";
         stock = new Inventory(5);
     }
 
