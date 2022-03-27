@@ -10,6 +10,7 @@ public class Spell extends Weapon {
         this.reducedStat = reducedStat;
     }
 
+    @Override
     public String toString() {
         return name + " / " + Integer.toString(price) + " / " + Integer.toString(minLevel) + " / " + Integer.toString(damage) + " / " +Integer.toString(mana) + " / " + reducedStat;
     }
@@ -36,6 +37,7 @@ public class Spell extends Weapon {
     
     }
 
+    @Override
     public String inventoryHeader() {
         return "Spell Name / Price / Level Required / Mana Required / Stat Reduced";
     }
