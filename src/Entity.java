@@ -6,8 +6,6 @@ public abstract class Entity {
 
     public abstract String toString();
 
-    public abstract boolean attack(Entity other);
-
     public String getName() {
         return name;
     }
