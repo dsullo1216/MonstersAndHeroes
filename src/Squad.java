@@ -49,4 +49,13 @@ public class Squad {
         return party[index];
     }
 
+    public boolean isEliminated() {
+        for (int i = 0; i < party.length; i++) {
+            if (party[i].getHP() > 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
