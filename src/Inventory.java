@@ -1,27 +1,27 @@
 public class Inventory {
     
-    private Item[] inventory;
+    private Item[] items;
 
     public Inventory(int length) {
-        this.inventory = new Item[length];
+        this.items = new Item[length];
     }
 
     public boolean addItem(Item item) {
         int i = 0;
-        while (inventory[i] != null && i < inventory.length)  {
+        while (items[i] != null && i < items.length)  {
             i++;
         }
-        if (i >= inventory.length) {
+        if (i >= items.length) {
             return false;
         }
-        inventory[i] = item;
+        items[i] = item;
         return true;
     }
 
     public boolean removeItem(Item item) {
-        for (int i = 0; i < inventory.length; i++) {
-            if (inventory[i] == item) {
-                inventory[i] = null;
+        for (int i = 0; i < items.length; i++) {
+            if (items[i] == item) {
+                items[i] = null;
                 return true;
             }
         }
@@ -29,8 +29,8 @@ public class Inventory {
     }
 
     public int findItem(Item item) {
-        for (int i = 0; i < inventory.length; i++) {
-            if (inventory[i].equals(item)) {
+        for (int i = 0; i < items.length; i++) {
+            if (items[i].equals(item)) {
                 return i;
             }
         }
@@ -38,7 +38,7 @@ public class Inventory {
     }
 
     public Item getItemAt(int index) {
-        return inventory[index];
+        return items[index];
     }
 
 }
