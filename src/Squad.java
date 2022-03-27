@@ -1,10 +1,6 @@
-public class Squad {
+public abstract class Squad {
     
     protected Entity[] party;
-
-    public Squad(int size) {
-        party = new Entity[size];
-    }
 
     public String toString() {
         String result = party[0].type + ": " + '\n' + "No / " + party[0].description() + '\n';;
