@@ -54,4 +54,13 @@ public abstract class Squad {
         return true;
     }
 
+    public boolean isFull() {
+        for (int i = 0; i < party.length; i++) {
+            if (party[i] == null) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
