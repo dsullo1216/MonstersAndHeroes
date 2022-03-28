@@ -35,4 +35,8 @@ public class Weapon extends Item {
         return damage;
     }
 
+    public String description() {
+        return DESCRIPTION;
+    }
+
 }

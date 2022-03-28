@@ -41,4 +41,8 @@ public class Potion extends Item {
         return buffedStat;
     }
 
+    public String description() {
+        return DESCRIPTION;
+    }
+
 }

@@ -39,4 +39,9 @@ public class Spell extends Weapon {
         return reducedStat;
     }
     
+    @Override
+    public String description() {
+        return DESCRIPTION;
+    }
+
 }

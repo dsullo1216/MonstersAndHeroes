@@ -35,4 +35,8 @@ public class Armor extends Item {
         return defense;
     }
 
+    public String description() {
+        return DESCRIPTION;
+    }
+
 }
