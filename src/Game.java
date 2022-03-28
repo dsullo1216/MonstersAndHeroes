@@ -7,8 +7,6 @@ public abstract class Game {
 
     public abstract void launchGame(Scanner sc) throws IOException;
 
-    public abstract void processInput(Scanner sc);
-
-    public abstract void playGame(Scanner sc);
+    public abstract void playGame(Scanner sc) throws IOException;
 
 }
