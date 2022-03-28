@@ -160,7 +160,8 @@ public class HeroesAndMonstersGame extends Game {
                 }
                 case (5): {
                     // TODO LAUNCH INVENTORY HERE
-                    System.out.println("Soon you will be able to manage your inventory");
+                    UserInventoryUI inventoryCheck = new UserInventoryUI(party);
+                    inventoryCheck.launchInterface(sc);
                     break;
                 }
                 case (6): {
