@@ -150,8 +150,8 @@ public class HeroesAndMonstersGame extends Game {
                     break;
                 }
                 case (3): {
-                    // TODO LAUNCH MARKET HERE
-                    System.out.println("Soon you will be able to see the market");
+                    MarketUI marketWindow = new MarketUI(party, (MarketCell) map.getCell(map.getHeroSquadPosition()));
+                    marketWindow.launchInterface(sc);
                     break;
                 }
                 case (4): {

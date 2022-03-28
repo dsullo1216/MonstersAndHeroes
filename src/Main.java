@@ -19,10 +19,10 @@ public class Main {
         for (int i = 0; i < test4.length; i++) {
             System.out.print(i + ". ");
             System.out.println(test4[i]);
-        }
+        }*/
         Game test1 = new HeroesAndMonstersGame();
         Scanner sc = new Scanner(System.in);
-        test1.playGame(sc);*/
+        test1.playGame(sc);
         MarketCell test = new MarketCell(new int[] {0,0});
         Inventory testInv = test.getStock();
         for (int i = 0; i < testInv.size(); i++) {
