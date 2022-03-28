@@ -1,8 +1,6 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-import javax.security.auth.login.CredentialException;
-
 public class UserInventoryUI implements UserInterface {
 
     HeroSquad party;
