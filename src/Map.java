@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Random;
 
 public class Map {
@@ -6,7 +7,7 @@ public class Map {
     private Cell[][] map;
     private int[] currPosition;
 
-    public Map() {
+    public Map() throws IOException {
         this.map = new Cell[8][8];
         this.map[0][0] = new BattleCell(new int[] {0,0});
         ((AccessibleCell) this.map[0][0]).setSquadHere();
@@ -14,12 +15,12 @@ public class Map {
         randomizeMap();
     }
 
-    public Map(int mapSize) {
+    public Map(int mapSize) throws IOException {
         this.map = new Cell[mapSize][mapSize];
         randomizeMap();
     }
 
-    public Map(int mapLength, int mapWidth) {
+    public Map(int mapLength, int mapWidth) throws IOException {
         this.map = new Cell[mapLength][mapWidth];
         randomizeMap();
     }
@@ -48,7 +49,7 @@ public class Map {
         
     }
 
-    private void randomizeMap() {
+    private void randomizeMap() throws IOException {
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[0].length; j++) {
                 if (i == 0 && j == 0) {

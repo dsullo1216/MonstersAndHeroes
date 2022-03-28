@@ -7,7 +7,7 @@ public class HeroesAndMonstersGame extends Game {
     private static final double BATTLERATE = 0.25;
     HeroSquad party;
 
-    public HeroesAndMonstersGame() {
+    public HeroesAndMonstersGame() throws IOException {
         this.map = new Map();
     }
 
@@ -159,7 +159,6 @@ public class HeroesAndMonstersGame extends Game {
                     break;
                 }
                 case (5): {
-                    // TODO LAUNCH INVENTORY HERE
                     UserInventoryUI inventoryCheck = new UserInventoryUI(party);
                     inventoryCheck.launchInterface(sc);
                     break;

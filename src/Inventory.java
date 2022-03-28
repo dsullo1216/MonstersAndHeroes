@@ -1,9 +1,21 @@
+import java.io.IOException;
+import java.util.*;
+
 public class Inventory {
     
     private Item[] items;
 
     public Inventory(int length) {
         this.items = new Item[length];
+    }
+
+    public void randomizeInventory() throws IOException {
+        Item[] itemList = ReadFiles.ListOfItems();
+        Collections.shuffle(Arrays.asList(itemList));
+        for (int i = 0; i < items.length; i++) {
+            addItem(itemList[i]);
+        }
+        
     }
 
     public boolean addItem(Item item) {
