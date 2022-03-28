@@ -27,11 +27,7 @@ public class Potion extends Item {
         }
         
         Potion otherP = (Potion) other;
-        return ((this.name == otherP.getName()) && 
-                (this.price == otherP.getPrice()) && 
-                (this.minLevel == otherP.getMinLevel()) && 
-                (this.buffAmt == otherP.getBuffAmt()) && 
-                (this.buffedStat == otherP.getBuffedStat()));
+        return (this.name == otherP.getName());
     
     }
 

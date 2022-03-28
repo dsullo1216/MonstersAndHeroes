@@ -25,10 +25,7 @@ public class Weapon extends Item {
         }
         
         Weapon otherW = (Weapon) other;
-        return ((this.name == otherW.getName()) && 
-                (this.price == otherW.getPrice()) && 
-                (this.minLevel == otherW.getMinLevel()) && 
-                (this.damage == otherW.getDamage()));
+        return (this.name == otherW.getName());
     
     }
 

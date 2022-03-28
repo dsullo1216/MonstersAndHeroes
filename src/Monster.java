@@ -35,12 +35,7 @@ public class Monster extends Entity {
         }
         
         Monster otherM = (Monster) other;
-        return ((this.name == otherM.getName()) && 
-                (this.level == otherM.getLevel()) &&
-                (this.damage == otherM.getDamage()) &&
-                (this.defense == otherM.getDefense()) &&
-                (this.dodgeChance == otherM.getDodgeChance()) &&
-                (this.type == otherM.getType()));
+        return (this.name == otherM.getName());
 
     }
 

@@ -52,12 +52,7 @@ public class Hero extends Entity {
         }
         
         Hero otherH = (Hero) other;
-        return ((this.name == otherH.getName()) && 
-                (this.mana == otherH.getMana()) && 
-                (this.strength == otherH.getStrength()) && 
-                (this.agility == otherH.getAgility()) &&
-                (this.dexterity == otherH.getDexterity()) && 
-                (this.type == otherH.getType()));
+        return (this.name == otherH.getName());
 
     }
 

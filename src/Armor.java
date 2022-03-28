@@ -25,10 +25,7 @@ public class Armor extends Item {
         }
         
         Armor otherA = (Armor) other;
-        return ((this.name == otherA.getName()) && 
-                (this.price == otherA.getPrice()) && 
-                (this.minLevel == otherA.getMinLevel()) && 
-                (this.defense == otherA.getDefense()));
+        return (this.name == otherA.getName());
     
     }
 

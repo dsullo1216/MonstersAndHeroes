@@ -27,13 +27,7 @@ public class Spell extends Weapon {
         }
         
         Spell otherS = (Spell) other;
-        return ((this.name == otherS.getName()) && 
-                (this.price == otherS.getPrice()) && 
-                (this.minLevel == otherS.getMinLevel()) && 
-                (this.damage == otherS.getDamage()) && 
-                (this.type == otherS.getType()) && 
-                (this.mana == otherS.getMana()) && 
-                (this.reducedStat == otherS.getReducedStat()));
+        return (this.name == otherS.getName());
     
     }
 
