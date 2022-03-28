@@ -154,7 +154,7 @@ public class UserInventoryUI extends UserInterface {
         while (run) {
             Hero currHero = chooseHero(sc);
             manageInventory(sc, currHero);
-            System.out.print("Would you like to check your inventory again? Please enter either 'Y' or 'N' to chose: ");
+            System.out.print("Would you like to check your inventory again? Please enter either 'Y' or 'N' to choose: ");
             char runChoice = sc.next().charAt(0);
             while (runChoice != 'Y' && runChoice != 'N') {
                 System.out.print("Invalid input. Please enter either 'Y' or 'N' to chose: ");

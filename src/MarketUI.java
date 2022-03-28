@@ -76,7 +76,44 @@ public class MarketUI extends UserInterface {
     }
 
     public boolean sellItem(Scanner sc) {
-        return false;
+        System.out.println("Welcome to the seller's counter where you can sell your items. You can choose which hero you would like to sell an item from and then pick which item you'd like to sell");
+        Hero seller = chooseHero(sc);
+        System.out.println("Here are the names, types, and price you will receive for each of your items.");
+        System.out.println("No / Name / Type / Price");
+        Item currItem;
+        double price = 0;
+        for (int i = 0; i < seller.getInventory().size(); i++) {
+            if (seller.getInventory().getItemAt(i) != null) {
+                currItem = seller.getInventory().getItemAt(i);
+                price = currItem.getPrice() * 0.5;
+                System.out.println(i + ". / " + currItem.getName() + " / " + currItem.getType() + " / " + price);
+            }
+        }
+        System.out.print("Would you like to sell one of these items? (Y/N): ");
+        char sellChoice = sc.next().charAt(0);
+        while (sellChoice != 'Y' && sellChoice != 'N') {
+            System.out.print("Invalid input. Please enter either 'Y' or 'N' to purchase or not: ");
+            sellChoice = sc.next().charAt(0);
+        }
+        if (sellChoice == 'N') {
+            System.out.println("You chose to not sell any of your items.");
+            return false;
+        }
+        else {
+            System.out.println("Which item would you like to sell? Please choose which item by entering the number next to its name");
+            System.out.print("Please choose an item to sell: ");
+            String indexToSell = sc.next();
+            while (Integer.valueOf(indexToSell) < 0 && Integer.valueOf(indexToSell) > seller.getInventory().size() && seller.getInventory().getItemAt(Integer.valueOf(indexToSell)) != null) {
+                System.out.print("Invalid input please try again: ");
+                indexToSell = sc.next();
+            }
+            Item itemToSell = seller.getInventory().getItemAt(Integer.valueOf(indexToSell));
+            price = itemToSell.getPrice();
+            seller.updateWallet((int) (seller.getWallet() + price));
+            seller.getInventory().removeItem(itemToSell);
+            System.out.println("You have successfully sold your " + itemToSell.getName() + "\n");
+            return true;
+        }
     }
 
     public void shopOperations(Scanner sc) {
@@ -87,7 +124,7 @@ public class MarketUI extends UserInterface {
                 break;
             }
             case (1): {
-                // TODO SELL ITEM
+                sellItem(sc);
                 break;
             }
             default: {
@@ -99,9 +136,18 @@ public class MarketUI extends UserInterface {
     @Override
     public void launchInterface(Scanner sc) throws IOException {
         System.out.println("Welcome to the market. Here you can either buy items from the merchant or sell your items for 50% of their value.");
-        buyItem(sc);
-
-        
+        boolean run = true;
+        while (run) {
+            shopOperations(sc);
+            System.out.print("Would you like to utilize the market again? Please enter either 'Y' or 'N' to choose: ");
+            char runChoice = sc.next().charAt(0);
+            while (runChoice != 'Y' && runChoice != 'N') {
+                System.out.print("Invalid input. Please enter either 'Y' or 'N' to chose: ");
+                runChoice = sc.next().charAt(0);
+            }
+            if (runChoice == 'N') {
+                run = false;
+            }
+        }   
     }
-    
 }
