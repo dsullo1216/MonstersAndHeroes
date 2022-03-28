@@ -41,4 +41,8 @@ public class Inventory {
         return items[index];
     }
 
+    public int size() {
+        return items.length;
+    }
+
 }

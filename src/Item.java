@@ -7,8 +7,6 @@ public abstract class Item {
 
     public abstract String toString();
 
-    public abstract String inventoryHeader();
-
     public String getName() {
         return name;
     }

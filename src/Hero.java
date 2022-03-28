@@ -2,6 +2,7 @@ import java.io.IOException;
 
 public class Hero extends Entity {
 
+    public static final String DESCRIPTION = "Type    /   Name    /   Level    /   HP    /   Mana    /   Defense    /   Strength    /   Agility    /   Dexterity    /   Wallet";
     protected int exp;
     protected int mana;
     protected int strength;
@@ -56,10 +57,6 @@ public class Hero extends Entity {
 
     }
 
-    public String description() {
-        return "Type    /   Name    /   Level    /   HP    /   Mana    /   Defense    /   Strength    /   Agility    /   Dexterity    /   Wallet";
-    }
-
     public String getType() {
         return type;
     }
@@ -109,6 +106,10 @@ public class Hero extends Entity {
         return newWallet;
     }
 
+    public Inventory getInventory() {
+        return inventory;
+    }
+
     public void levelUp() {
         this.level += 1;
         this.exp = 0;
@@ -117,6 +118,11 @@ public class Hero extends Entity {
         this.strength *= 1.05;
         this.agility *= 1.05;
         this.dexterity *= 1.05;
+    }
+
+    @Override
+    public String description() {
+        return DESCRIPTION;
     }
 
 }

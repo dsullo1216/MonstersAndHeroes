@@ -1,5 +1,6 @@
 public class Weapon extends Item {
     
+    public static final String DESCRIPTION = "Weapon Name / Price / Level Required / Damage";
     protected int damage;
 
     public Weapon(String name, int price, int minLevel, int damage) {
@@ -27,10 +28,6 @@ public class Weapon extends Item {
         Weapon otherW = (Weapon) other;
         return (this.name == otherW.getName());
     
-    }
-
-    public String inventoryHeader() {
-        return "Weapon Name / Price / Level Required / Damage";
     }
 
     public int getDamage() {

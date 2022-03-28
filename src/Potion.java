@@ -1,5 +1,6 @@
 public class Potion extends Item {
 
+    public static final String DESCRIPTION = "Potion Name / Price / Level Required / Buff Amount / Stat Buffed";
     private int buffAmt;
     private String buffedStat;
 
@@ -29,10 +30,6 @@ public class Potion extends Item {
         Potion otherP = (Potion) other;
         return (this.name == otherP.getName());
     
-    }
-
-    public String inventoryHeader() {
-        return "Potion Name / Price / Level Required / Buff Amount / Stat Buffed";
     }
 
     public int getBuffAmt() {

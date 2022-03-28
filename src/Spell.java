@@ -1,5 +1,6 @@
 public class Spell extends Weapon {
 
+    public static final String DESCRIPTION = "Spell Name / Price / Level Required / Mana Required / Stat Reduced";
     protected String type;
     protected int mana;
     protected String reducedStat;
@@ -29,11 +30,6 @@ public class Spell extends Weapon {
         Spell otherS = (Spell) other;
         return (this.name == otherS.getName());
     
-    }
-
-    @Override
-    public String inventoryHeader() {
-        return "Spell Name / Price / Level Required / Mana Required / Stat Reduced";
     }
 
     public String getType() {

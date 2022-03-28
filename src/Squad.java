@@ -66,4 +66,8 @@ public abstract class Squad {
         return true;
     }
 
+    public int size() {
+        return party.length;
+    }
+
 }

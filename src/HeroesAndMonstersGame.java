@@ -5,7 +5,7 @@ public class HeroesAndMonstersGame extends Game {
 
     private Random rand = new Random();
     private static final double BATTLERATE = 0.25;
-    private HeroSquad party;
+    HeroSquad party;
 
     public HeroesAndMonstersGame() {
         this.map = new Map();
@@ -25,7 +25,7 @@ public class HeroesAndMonstersGame extends Game {
         System.out.println("Please note that the order in which you pick your heroes will be the order in which they fight in battle");
         System.out.println();
         Hero[] heroList = ReadFiles.ListOfHeroes();
-        System.out.println(heroList[0].description());
+        System.out.println(Hero.DESCRIPTION);
         for (int i = 0; i < heroList.length; i++) {
             System.out.print(i + ". ");
             System.out.println(heroList[i]);
@@ -74,7 +74,6 @@ public class HeroesAndMonstersGame extends Game {
     }
 
     public int processMapInput(Scanner sc) {
-        // TODO Auto-generated method stub
         System.out.print("What would you like to do? Remember you can press 'h' to display the rules and list of controls again: ");
         char choice = Character.toLowerCase(sc.next().charAt(0));
         int[] currPosition = map.getHeroSquadPosition();
@@ -141,7 +140,6 @@ public class HeroesAndMonstersGame extends Game {
 
 
     public void playGame(Scanner sc) throws IOException {
-        // TODO Auto-generated method stub
         launchGame(sc);
         while (true) {
             int choice = processMapInput(sc);

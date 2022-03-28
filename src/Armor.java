@@ -1,5 +1,6 @@
 public class Armor extends Item {
 
+    public static final String DESCRIPTION = "Armor Name / Price / Level Required / Defense";
     private int defense;
     
     public Armor(String name, int price, int minLevel, int defense) {
@@ -27,10 +28,6 @@ public class Armor extends Item {
         Armor otherA = (Armor) other;
         return (this.name == otherA.getName());
     
-    }
-
-    public String inventoryHeader() {
-        return "Armor Name / Price / Level Required / Defense";
     }
 
     public int getDefense() {

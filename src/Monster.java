@@ -1,5 +1,6 @@
 public class Monster extends Entity {
     
+    public static final String DESCRIPTION = "Type    /   Name    /   Level    /   HP    /   Damage    /   Defense    /   Dodge Chance";
     protected int damage;
     protected int defense;
     protected int dodgeChance;
@@ -39,10 +40,6 @@ public class Monster extends Entity {
 
     }
 
-    public String description() {
-        return "Type    /   Name    /   Level    /   HP    /   Damage    /   Defense    /   Dodge Chance";
-    }
-
     public String getType() {
         return type;
     }
@@ -57,6 +54,11 @@ public class Monster extends Entity {
 
     public int getDodgeChance() {
         return dodgeChance;
+    }
+
+    @Override
+    public String description() {
+        return DESCRIPTION;
     }
 
 }
