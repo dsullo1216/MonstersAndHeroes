@@ -6,7 +6,7 @@ public class TSVReader {
     public static String[] readTSVFile(String fileName) throws IOException {
 
         BufferedReader tsvFile = new BufferedReader(new FileReader(fileName));
-        ArrayList<String> readArr = new ArrayList<String>();
+        ArrayList<String> readArr = new ArrayList<>();
         String currRow;
 
         while ((currRow = tsvFile.readLine()) != null) {
