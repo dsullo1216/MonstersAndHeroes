@@ -14,9 +14,10 @@ public class Main {
         System.out.println();
         System.out.print(mapt.moveSquad(new int[] {0,1}));
         mapt.printMap();*/
-        String[] test = TSVReader.readTSVFile("./src/data/FireSpells.tsv");
-        for (String uh: test) {
-            System.out.println(uh);
+        Hero[] test = PossibleHeroes.getListOfHeroes();
+        for (int i = 0; i < test.length; i++) {
+            System.out.print(i + ". ");
+            System.out.println(test[i]);
         }
         }
 }
