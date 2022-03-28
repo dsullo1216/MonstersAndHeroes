@@ -8,6 +8,7 @@ public class Weapon extends Item {
         this.price = price;
         this.minLevel = minLevel;
         this.damage = damage;
+        this.type = "Weapon";
     }
 
     public String toString() {

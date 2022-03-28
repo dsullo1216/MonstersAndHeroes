@@ -8,6 +8,7 @@ public class Armor extends Item {
         this.price = price;
         this.minLevel = minLevel;
         this.defense = defense;
+        this.type = "Armor";
     }
 
     public String toString() {

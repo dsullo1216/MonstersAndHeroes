@@ -4,6 +4,7 @@ public abstract class Item {
     protected String name;
     protected int price;
     protected int minLevel;
+    protected String type;
 
     public abstract String toString();
 
@@ -17,6 +18,10 @@ public abstract class Item {
 
     public int getMinLevel() {
         return minLevel;
+    }
+
+    public String getType() {
+        return type;
     }
     
 }

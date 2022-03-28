@@ -10,6 +10,7 @@ public class Potion extends Item {
         this.minLevel = minLevel;
         this.buffAmt = buffAmt;
         this.buffedStat = buffedStat;
+        this.type = "Potion";
     }
 
     public String toString() {
