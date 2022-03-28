@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class Hero extends Entity {
 
     protected int exp;
@@ -10,7 +12,7 @@ public class Hero extends Entity {
     protected Armor armor;
     protected Inventory inventory;
 
-    public Hero(String name, int mana, int strength, int agility, int dexterity, int wallet, int level) {
+    public Hero(String name, int mana, int strength, int agility, int dexterity, int wallet, int level) throws IOException {
         this.name = name;
         this.mana = mana;
         this.strength = strength;
@@ -21,7 +23,7 @@ public class Hero extends Entity {
         this.hp = level * 100;
         this.exp = 0;
         this.weapon = null;
-        this.armor = null;
+        this.armor = (Armor) ReadFiles.ListOfItems()[0];
         this.inventory = new Inventory(10);
     }
 

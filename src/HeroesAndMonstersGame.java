@@ -22,6 +22,7 @@ public class HeroesAndMonstersGame extends Game {
 
     public void processInput(Scanner sc) {
         // TODO Auto-generated method stub
+        party.getEntityAt(0);
         
     }
 

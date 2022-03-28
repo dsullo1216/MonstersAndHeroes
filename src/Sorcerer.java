@@ -1,6 +1,8 @@
+import java.io.IOException;
+
 public class Sorcerer extends Hero {
     
-    public Sorcerer(String name, int mana, int strength, int agility, int dexterity, int wallet, int level) {
+    public Sorcerer(String name, int mana, int strength, int agility, int dexterity, int wallet, int level) throws IOException {
         super(name, mana, strength, agility, dexterity, wallet, level);
         this.type = "Sorcerer";
     }

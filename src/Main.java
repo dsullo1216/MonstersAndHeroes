@@ -14,7 +14,8 @@ public class Main {
         System.out.println();
         System.out.print(mapt.moveSquad(new int[] {0,1}));
         mapt.printMap();*/
-        Hero[] test = PossibleHeroes.getListOfHeroes();
+        Hero[] test = ReadFiles.ListOfHeroes();
+        System.out.println(test[0].description());
         for (int i = 0; i < test.length; i++) {
             System.out.print(i + ". ");
             System.out.println(test[i]);
