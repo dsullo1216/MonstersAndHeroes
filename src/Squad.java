@@ -3,9 +3,9 @@ public abstract class Squad {
     protected Entity[] party;
 
     public String toString() {
-        String result = party[0].type + ": " + '\n' + "No / " + party[0].description() + '\n';;
+        String result = "No / " + party[0].description() + '\n';;
         for (int i = 0; i < party.length; i++) {
-            result += Integer.toString(i+1) + "." + party[0].toString() + '\n';
+            result += Integer.toString(i+1) + ". " + party[i].toString() + '\n';
         }
         return result;
     }
