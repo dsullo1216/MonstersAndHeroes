@@ -34,6 +34,9 @@ public abstract class Squad {
 
     public int findEntity(Entity entity) {
         for (int i = 0; i < party.length; i++) {
+            if (party[i] == null) {
+                return -1;
+            }
             if (party[i].equals(entity)) {
                 return i;
             }
