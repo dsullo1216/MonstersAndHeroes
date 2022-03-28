@@ -103,11 +103,63 @@ public class Hero extends Entity {
 
     public int updateWallet(int newWallet) {
         this.wallet = newWallet;
-        return newWallet;
+        return wallet;
+    }
+
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public Weapon updateWeapon(Weapon newWeapon) {
+        this.weapon = newWeapon;
+        return weapon;
+    }
+
+    public Armor getArmor() {
+        return armor;
+    }
+
+    public Armor updateArmor(Armor newArmor) {
+        this.armor = newArmor;
+        return armor;
     }
 
     public Inventory getInventory() {
         return inventory;
+    }
+
+    public void usePotion(Potion potion) {
+        String[] buffedStats = potion.getBuffedStat().split("/");
+        int buffAmt = potion.getBuffAmt();
+        for (int i = 0; i < buffedStats.length; i++) {
+            String buffedStat = buffedStats[0];
+            switch (buffedStat) {
+                case ("Health"): {
+                    updateHP(hp + buffAmt);
+                    break;
+                }
+                case ("Strength"): {
+                    updateStrength(strength + buffAmt);
+                    break;
+                }
+                case ("Mana"): {
+                    updateMana(mana + buffAmt);
+                    break;
+                }
+                case ("Agility"): {
+                    updateAgility(agility + buffAmt);
+                    break;
+                }
+                case ("Dexterity"): {
+                    updateDexterity(dexterity + buffAmt);
+                    break;
+                }
+                default: {
+                    System.out.println();
+                    break;
+                }
+            }
+        }
     }
 
     public void levelUp() {
