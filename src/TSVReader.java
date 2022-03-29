@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 
+// Class that simply lets us read a TSV file and export it as a String[]
 public class TSVReader {
  
     public static String[] readTSVFile(String fileName) throws IOException {

@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.*;
 
+// Extension of the Game class that implements the methods needed for Heroes and Monster
 public class HeroesAndMonstersGame extends Game {
 
     private Random rand = new Random();
@@ -145,7 +146,6 @@ public class HeroesAndMonstersGame extends Game {
             int choice = processMapInput(sc);
             switch (choice) {
                 case (2): {
-                    // TODO LAUNCH BATTLE HERE
                     BattleUI battleWindow = new BattleUI(party);
                     battleWindow.launchInterface(sc);
                     System.out.println("A battle will occur here soon");

@@ -1,5 +1,6 @@
 import java.io.IOException;
 
+// Subclass of Entity to represent Heroes. Will be extended by special types of Heroes.
 public class Hero extends Entity {
 
     public static final String DESCRIPTION = "Type    /   Name    /   Level    /   HP    /   Mana    /   Defense    /   Strength    /   Agility    /   Dexterity    /   Wallet";
@@ -55,6 +56,18 @@ public class Hero extends Entity {
         Hero otherH = (Hero) other;
         return (this.name == otherH.getName());
 
+    }
+
+    public int getEXP() {
+        return exp;
+    }
+
+    public int updateEXP(int newEXP) {
+        this.exp = newEXP;
+        if (this.exp > (this.level * 10)) {
+            levelUp();
+        }
+        return exp;
     }
 
     public String getType() {

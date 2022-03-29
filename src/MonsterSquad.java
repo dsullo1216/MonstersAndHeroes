@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.*;
 
+// Represents a hoarde of monsters to be fought during a battle
 public class MonsterSquad extends Squad{
     
     public MonsterSquad(int size) {

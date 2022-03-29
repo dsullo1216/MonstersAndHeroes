@@ -1,5 +1,6 @@
 import java.io.IOException;
 
+// Specialized type of Hero that includes specialized version of level up
 public class Sorcerer extends Hero {
     
     public Sorcerer(String name, int mana, int strength, int agility, int dexterity, int wallet, int level) throws IOException {

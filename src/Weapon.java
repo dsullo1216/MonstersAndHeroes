@@ -1,3 +1,4 @@
+// Subclass of Items that represents Weapons that Heroes can use in battle. Implements necessary methods and additional ones
 public class Weapon extends Item {
     
     public static final String DESCRIPTION = "Weapon Name / Price / Level Required / Damage";

@@ -1,3 +1,4 @@
+// Subclass of the Item class that represents armor that can be worn by the hero.
 public class Armor extends Item {
 
     public static final String DESCRIPTION = "Armor Name / Price / Level Required / Defense";

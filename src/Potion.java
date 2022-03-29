@@ -1,3 +1,4 @@
+// Subclass of Item to represent Potion items and their attributes. Includes all necessary methods
 public class Potion extends Item {
 
     public static final String DESCRIPTION = "Potion Name / Price / Level Required / Buff Amount / Stat Buffed";

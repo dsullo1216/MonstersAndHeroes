@@ -1,5 +1,6 @@
 import java.io.IOException;
 
+// Class to handle reading all of the TSV files supplied
 public class ReadFiles {
  
     public static Hero[] ListOfHeroes() throws IOException {

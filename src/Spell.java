@@ -1,3 +1,4 @@
+// Subclass of Weapon that implements additional features needed for Spell to work.
 public class Spell extends Weapon {
 
     public static final String DESCRIPTION = "Spell Name / Price / Level Required / Mana Required / Stat Reduced";

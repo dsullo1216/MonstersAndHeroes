@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+// Subclass of UserInterface class to represent User Interface where Users can manage their inventory. Includes all necessary methods
 public class UserInventoryUI extends UserInterface {
 
     public UserInventoryUI(HeroSquad party) {

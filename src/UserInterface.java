@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+// Abstract class that includes functions/headers for all other UI classes
 public abstract class UserInterface {
 
     HeroSquad party;

@@ -1,5 +1,6 @@
 import java.io.IOException;
 
+// Subclass of AccessibleCell that represents a cell where the user can go into the market
 public class MarketCell extends AccessibleCell {
 
     private Inventory stock;

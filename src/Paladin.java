@@ -1,5 +1,6 @@
 import java.io.IOException;
 
+// Specific version of Hero class that includes specialized version of level up
 public class Paladin extends Hero {
     
     public Paladin(String name, int mana, int strength, int agility, int dexterity, int wallet, int level) throws IOException {

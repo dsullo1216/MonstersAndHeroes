@@ -1,3 +1,4 @@
+// Abstract class to serve as a template for Heroes and Monsters to fight one another
 public abstract class Entity {
     
     protected String type;

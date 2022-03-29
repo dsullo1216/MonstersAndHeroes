@@ -1,3 +1,4 @@
+// Abstract class that represents a collection of Heroes. Will be used for player's party as well as hoardes of mobs
 public abstract class Squad {
     
     protected Entity[] party;

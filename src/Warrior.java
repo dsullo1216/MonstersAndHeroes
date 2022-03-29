@@ -1,5 +1,6 @@
 import java.io.IOException;
 
+// Subclass of Hero to represent Warrior class. Implements specialized version of level_up
 public class Warrior extends Hero {
     
     public Warrior(String name, int mana, int strength, int agility, int dexterity, int wallet, int level) throws IOException {

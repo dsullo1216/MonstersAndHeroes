@@ -268,13 +268,13 @@ public class BattleUI extends UserInterface {
 
             if (battleOperations(sc)) {
                 if (!nextMonster()) {
-                    finished = finishBattle(true);
+                    finished = true;
                 }
             }
 
             if (attackHero()) {
                 if (!nextHero()) {
-                    finished = finishBattle(false);
+                    finished = true;
                 }
             }
 

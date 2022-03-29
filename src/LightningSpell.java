@@ -1,3 +1,4 @@
+// Specialized version of Spell that includes specific debuffs
 public class LightningSpell extends Spell {
     
     public LightningSpell(String name, int price, int minLevel, int damage, int mana) {

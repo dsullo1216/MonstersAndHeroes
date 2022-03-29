@@ -1,3 +1,4 @@
+// Subclass of Entity that represents a mob for the hero to fight against. Implements all necessary methods.
 public class Monster extends Entity {
     
     public static final String DESCRIPTION = "Type    /   Name    /   Level    /   HP    /   Damage    /   Defense    /   Dodge Chance";

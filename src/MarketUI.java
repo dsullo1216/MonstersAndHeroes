@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+// Subclass of UserInterface that represents the market where player can buy and sell items 
 public class MarketUI extends UserInterface {
 
     Inventory stock;

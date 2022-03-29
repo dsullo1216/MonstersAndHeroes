@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.Random;
 
+// Collection class that holds instances of Cells to represent the map. Includes methods to randomize the map.
 public class Map {
 
     private Random rand = new Random();

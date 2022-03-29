@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.*;
 
+// Class that represents either a hero's inventory or the inventory of a shop
 public class Inventory {
     
     private Item[] items;

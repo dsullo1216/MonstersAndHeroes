@@ -1,3 +1,4 @@
+// Abstract class to represent a cell where heroes can walk. Will be extended to become Battle Cells and Market Cells 
 public abstract class AccessibleCell extends Cell {
 
     protected boolean isHeroSquadHere;

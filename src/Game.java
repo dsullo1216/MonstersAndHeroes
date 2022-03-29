@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+// Abstract class to represent any Game using Scanner
 public abstract class Game {
  
     protected Map map;

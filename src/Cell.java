@@ -1,3 +1,4 @@
+// Abstract class to represent the Cells on the map
 public abstract class Cell {
 
     protected char symbol;
