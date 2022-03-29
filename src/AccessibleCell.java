@@ -9,7 +9,7 @@ public abstract class AccessibleCell extends Cell {
 
     @Override
     public char getSymbol() {
-        if (isHeroSquadHere == true) {
+        if (isHeroSquadHere) {
             return 'H';
         }
         return symbol;
@@ -24,7 +24,5 @@ public abstract class AccessibleCell extends Cell {
         this.isHeroSquadHere = false;
         return this.isHeroSquadHere;
     }
-
-    /* TODO ADD Trigger_Event Interface and each respective event to each tile */
  
 }

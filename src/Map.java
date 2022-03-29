@@ -61,7 +61,6 @@ public class Map {
                     this.map[i][j] = new InaccessibleCell(coord); 
                 }
                 else if (roll < 0.50) {
-                    // TODO SET RANDOM INVENTORY FOR EACH MARKET CELL
                     this.map[i][j] = new MarketCell(coord);
                 }
                 else {
