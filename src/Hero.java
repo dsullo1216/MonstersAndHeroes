@@ -23,7 +23,7 @@ public class Hero extends Entity {
         this.level = level;
         this.hp = level * 100;
         this.exp = 0;
-        this.weapon = null;
+        this.weapon = (Weapon) ReadFiles.ListOfItems()[6];
         this.armor = (Armor) ReadFiles.ListOfItems()[0];
         this.inventory = new Inventory(10);
     }

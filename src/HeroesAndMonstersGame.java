@@ -146,6 +146,8 @@ public class HeroesAndMonstersGame extends Game {
             switch (choice) {
                 case (2): {
                     // TODO LAUNCH BATTLE HERE
+                    BattleUI battleWindow = new BattleUI(party);
+                    battleWindow.launchInterface(sc);
                     System.out.println("A battle will occur here soon");
                     break;
                 }

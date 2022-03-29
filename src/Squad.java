@@ -48,6 +48,15 @@ public abstract class Squad {
         return party[index];
     }
 
+    public int nextAlive() {
+        for (int i = 0; i < party.length; i++) {
+            if (party[i] != null && party[i].getHP() > 0) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public boolean isEliminated() {
         for (int i = 0; i < party.length; i++) {
             if (party[i].getHP() > 0) {

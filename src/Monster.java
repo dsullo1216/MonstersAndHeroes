@@ -48,11 +48,26 @@ public class Monster extends Entity {
         return damage;
     }
 
+    public int updateDamage(int newDamage) {
+        this.damage = newDamage;
+        return damage;
+    }
+
     public int getDefense() {
         return defense;
     }
 
+    public int updateDefense(int newDefense) {
+        this.defense = newDefense;
+        return defense;
+    }
+
     public int getDodgeChance() {
+        return dodgeChance;
+    }
+
+    public int updateDodgeChance(int newDodgeChance) {
+        this.dodgeChance = newDodgeChance;
         return dodgeChance;
     }
 
