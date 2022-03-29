@@ -124,7 +124,7 @@ public class BattleUI extends UserInterface {
     }
 
     private boolean attackHero() {
-        double dodgeChance = currHero.getAgility() * 0.002;
+        double dodgeChance = currHero.getAgility() * 0.0002;
         float roll = rand.nextFloat();
         if (roll < dodgeChance) {
             System.out.println("========================================================");
@@ -143,6 +143,7 @@ public class BattleUI extends UserInterface {
                 return false;
             }
             else {
+                currHero.updateHP((int) (currHero.getHP() - damageDealt));
                 System.out.println("========================================================");
                 System.out.println("The monster successfully attacked you!");
                 System.out.println(currMonster.getName() + " dealt " + damageDealt + "damage to " + currHero.getName());
@@ -262,12 +263,17 @@ public class BattleUI extends UserInterface {
             displayCurrMonster();
 
             if (battleOperations(sc)) {
-                break;
+                if (!nextMonster()) {
+                    finished = finishBattle(true);
+                }
             }
 
-            attackHero();
+            if (attackHero()) {
+                if (!nextHero()) {
+                    finished = finishBattle(false);
+                }
+            }
 
-            break;
         }
         
     }
