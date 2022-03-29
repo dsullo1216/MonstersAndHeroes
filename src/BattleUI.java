@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.*;
 
+// Subclass of UserInterface that represents User Interface where Battle occurs. Implements all necessary methods
 public class BattleUI extends UserInterface {
 
     private Random rand = new Random();
@@ -57,6 +58,9 @@ public class BattleUI extends UserInterface {
             }
         }
         int chosenSpell = chooseSpell(sc);
+        if (chosenSpell == -1) {
+            return false;
+        }
         Spell spellToUse = (Spell) spellInventory.getItemAt(chosenSpell);
         double damageDealt = (currHero.getDexterity() / 10000) * spellToUse.getDamage();
         if (currHero.getMana() < spellToUse.getMana()) {
@@ -211,6 +215,7 @@ public class BattleUI extends UserInterface {
                 }
                 else {
                     ((Hero) party.getEntityAt(i)).updateWallet( ((Hero) party.getEntityAt(i)).getWallet() + 500);
+                    ((Hero) party.getEntityAt(i)).updateEXP( ((Hero) party.getEntityAt(i)).getEXP() + 2);
                 }
             }
         }
@@ -253,7 +258,6 @@ public class BattleUI extends UserInterface {
 
     @Override
     public void launchInterface(Scanner sc) throws IOException {
-        // TODO Auto-generated method stub
         System.out.println("You have encounter a hoarde of monsters! Be prepared to fight them!");
         boolean finished = false;
         while (!finished) {
