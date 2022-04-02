@@ -204,7 +204,7 @@ public class BattleUI extends UserInterface {
     }
 
     private boolean finishBattle(boolean HerosWon) {
-        if (HerosWon == false) {
+        if (!HerosWon) {
             System.out.println("Game Over. Thank you for playing!");
             
         }
@@ -269,12 +269,14 @@ public class BattleUI extends UserInterface {
             if (battleOperations(sc)) {
                 if (!nextMonster()) {
                     finished = true;
+                    finishBattle(true);
                 }
             }
 
             if (attackHero()) {
                 if (!nextHero()) {
                     finished = true;
+                    finishBattle(false);
                 }
             }
 
